@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main(){
+    struct stu_datils{
+      int roll;
+      char name[20];
+   union user_data{
+      long int votaridnumber;
+       long int addharidnumber;
+       long int panidnumber;
+   };
+    };struct stu_datils sb;
+    int option;
+    printf("Enter your Name\n");
+    gets(sb.name);
+    printf("Enter your Roll\n");
+    scanf("%d",&sb.roll);
+    printf("press-1 for votar id numbe, press-2 for addhar id numbe,press-3 for pan id number\n");
+    scanf("%d",&option);
+
+    switch(option) {
+        case 1:
+        printf("ENTER YOUR VOTAR ID NUMBER\n");
+        scanf("%ld",&sb.votaridnumber);
+            break;
+        case 2:
+            printf("ENTER YOUR ADDHAR ID NUMBER\n");
+            scanf("%ld",&sb.addharidnumber);
+            break;
+        case 3:
+            printf("ENTER YOUR PAN ID NUMBER\n");
+            scanf("%ld",&sb.panidnumber);
+            break;
+    }
+    printf("%s\n",sb.name);
+    printf("%d\n",sb.roll);
+    printf("ID CARD NO:%ld\n",sb.addharidnumber);
+}
